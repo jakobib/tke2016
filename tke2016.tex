@@ -66,23 +66,25 @@ Field & JSKOS & RDF \\
 \hline	
 URI      & \verb|uri|       & subject URI \\
 Title    & \verb|prefLabel| & \verb|skos:preflabel|, \verb|schema:name| \\
-\multirow{2}{*}{Alternative Title} &
+Alternative or &
 \multirow{2}{*}{\texttt{altLabel}} 
  							& \verb|skos:altLabel|, \verb|schema:name|, \\
-                          & & \verb|dct:title|, \verb|foaf:name| \\
+English Title               & & \verb|dct:title|, \verb|foaf:name| \\
 Author   & \verb|creator|   & \verb|dct:creator|, \verb|schema:creator| \\
 Abstract & \verb|scopeNote| & \verb|skos:scopeNote|, \verb|dct:description| \\
 Coverage & \verb|subject|   & \verb|dct:subject| \\
 Type     & \verb|type|      & \verb|dct:type|, \verb|rdf:type| \\
 Format   & -				&  \verb|dct:format| \\
+Size     & \verb|extent|    & \verb|dct:extent| \\
+License  & -                & \verb|dct:license|, \verb|schema:license| \\ 
 Access   & - 				& \verb|dct:rights| \\
 DDC      & \verb|subject|   & \verb|dct:subject|, \verb|schema:about| \\
 DDC Main Class & -\footnote{\label{fn:s}Only used for searching.} \\
 Wikidata & \verb|identifier| & \verb|skos:exactMapping|, \verb|dct:identifier| \\
-Wikipedia & -\footnote{Automatically derivable from Wikidata.} \\
 Link     & \verb|url|       & \verb|schema:url|, \verb|foaf:page| \\
 Language & \verb|language|  & \verb|schema:inLanguage|, \verb|dct:language| \\
 Topic    & \verb|subject| & \verb|dct:subject|, \verb|schema:about| \\
+Year of Creation & \verb|created| & \verb|dct:created| \\
 Term Translations  & -\textsuperscript{\ref{fn:s}} \\
 VIAF & -\footnote{\label{fn:p}Not refering to the KOS but to its publisher.} \\
 Address & -\textsuperscript{\ref{fn:p}} \\
@@ -93,7 +95,7 @@ Location & -\textsuperscript{\ref{fn:p}} \\
 \subsection{Alignment with NKOS AP}
 
 Both BARTOC and JSKOS origin in a bottom-up process by actual description of knowledge organization systems. For this reason the current state is not finished until it has been tested sufficiently in several real-world applications. The Networked Knowledge Organization Systems Dublin Core Application Profile (NKOS AP), created between 2010 and 2015 followed the opposite direction by theoretical investigation of KOS and their registries. The resulting metadata scheme is expected to be ``very important to terminology registries, service registries, vocabulary users (machine or human), and retrieval systems'' \cite{zeng2015nkos}. 
-A comparison of the current metadata scheme of BARTOC, JSKOS, and NKOS AP resulted in an overlap at 11 of 28 fields for BARTOC and 17 for JSKOS (table~\ref{tab:nkosap}).
+A comparison of the current metadata scheme of BARTOC, JSKOS, and NKOS AP resulted in an overlap at 13 of 28 fields for BARTOC and 18 for JSKOS (table~\ref{tab:nkosap}).
 
 \begin{table}\centering
 \caption{Mapping of NKOS AP to BARTOC and JSKOS}
@@ -109,17 +111,17 @@ NKOS AP field & BARTOC & JSKOS \\
 \verb|dct:type| 		& Type 		& \verb|type| \\
 \verb|dct:language| 	& Language  & \verb|languages| \\
 \verb|dct:identifier| 	& URI, Wikidata & \verb|uri|, \verb|identifier| \\
-\verb|dct:rights| 		& Access 	& \verb|license| \\
 \verb|dcat:contactPoint| & Link     & \verb|url| \\
+\verb|dct:license| 		& License 	& \verb|license| \\
+\verb|nkos:sizeNote| 	& Size		& \verb|extent| \\
 \verb|dct:format| 		& Format	& - \\
-\verb|dct:created|		& - 		& \verb|created| \\
+\verb|dct:created|		& Year of Creation & \verb|created| \\
 \verb|dct:issued| 		& - 		& \verb|issued| \\
 \verb|dct:modified|		& - 		& \verb|modified| \\
 \verb|wdrs:describedBy| & -         & \verb|subjectOf| \\
 \verb|dct:isPartOf| 		& - 	& \verb|partOf| \\
 \verb|prov:wasDerivedFrom| & - 		& \verb|versionOf| \\
 \verb|nkos:serviceOffered| & - 		& \verb|concepts|, \verb|types| \\
-\verb|nkos:sizeNote| 	& - 		& not defined yet \\
 \verb|dct:audience| & - 			& not defined yet \\
 \verb|nkos:basedOn| 	& - 		& not defined yet \\
 \verb|nkos:updateFrequency| & - 	& to be discussed \\
