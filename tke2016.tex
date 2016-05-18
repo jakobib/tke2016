@@ -56,7 +56,7 @@ It was clear from the start that BARTOC would address the international library 
 \subsection{BARTOC's current metadata scheme}
 \label{sec:scheme}
 
-BARTOC contains ``a relatively sufficient amount of metadata'' \cite{bratkova2014revue}. The metadata scheme used to describe KOS in BARTOC originates from the early days when BARTOC was just a blog called ``Thesaurusportal''.\footnote{\href{http://www.profi-wissen.de/hilfsmittel-fuer-alle-denkbaren-recherchegebiete-thesaurus-porta/}{http://www.profi-wissen.de/hilfsmittel-fuer-alle-denkbaren-recherchegebiete-thesaurus-porta/}} With migration of the database to Drupal CMS the schema was extended with a mapping to RDF, so KOS description in BARTOC can be used as Linked Open Data. Table~\ref{table:fields} lists all current metadata fields including their mapping to JSKOS (see section~\ref{sec:jskos}) and RDF. The mapping to RDF makes use of schema.org, FOAF, and SKOS ontology.
+BARTOC contains ``a relatively sufficient amount of metadata'' \cite{bratkova2014revue}. The metadata scheme used to describe KOS in BARTOC originates from the early days when BARTOC was just a blog called ``Thesaurusportal''.\footnote{\href{http://www.profi-wissen.de/hilfsmittel-fuer-alle-denkbaren-recherchegebiete-thesaurus-porta/}{http://www.profi-wissen.de/hilfsmittel-fuer-alle-denkbaren-recherchegebiete-thesaurus-porta/}} With migration of the database to Drupal CMS the schema was extended with a mapping to RDF, so KOS description in BARTOC can be used as Linked Open Data. Table~\ref{table:fields} lists all current metadata fields including their mapping to JSKOS (see section~\ref{sec:jskos} and figure~\ref{fig:concept-scheme-example} later) and RDF. The mapping to RDF makes use of schema.org, FOAF, and SKOS ontology.
 
 \begin{table}\centering
 \caption{Metadata schema and mappings of KOS description in BARTOC}
@@ -89,7 +89,9 @@ Term Translations  & -\textsuperscript{\ref{fn:s}} \\
 VIAF & -\footnote{\label{fn:p}Not refering to the KOS but to its publisher.} \\
 Address & -\textsuperscript{\ref{fn:p}} \\
 Location & -\textsuperscript{\ref{fn:p}} \\
+\hline
 \end{tabular}
+\vspace{-7mm}
 \end{table}
 
 \subsection{Alignment with NKOS AP}
@@ -133,21 +135,14 @@ NKOS AP field & BARTOC & JSKOS \\
 \verb|adms:sample| 			 & - 	& to be discussed \\
 \hline
 \end{tabular}
-
-%\hspace{0.5em}
-
-%Remaining NKOS AP fields not included in BARTOC and/or JSKOS yet:
-%\verb|nkos:sizeNote|, \verb|dct:audience|, \verb|nkos:basedOn|,
-%\verb|nkos:updateFrequency|,\\
-%\verb|nkos:usedBy|, \verb|nkos:alignedWith|, %\verb|frbrer:isRealizationOf|,
-%\verb|frbrer:isEmbodimentOf|, \verb|dct:relation|, and %\verb|adms:sample|.
+\vspace{-7mm}
 \end{table}
 
 \subsection{Use of controlled vocabularies to describe KOS}
-One particularly special feature of BARTOC, compared to other terminology registries, is its use of controlled vocabularies to describe KOS. It is considered as BARTOC's ``advantage that it specializes in supplementing Dewey’s decimal classification terms (up to the third hierarchic level) \ldots, as well as providing the multilingual EUROVOC thesaurus descriptors'' \cite{bratkova2014revue}. By now the following KOS are referenced. As all KOS also have a record in BARTOC, their corresponding BARTOC URI is also given.
+One particularly special feature of BARTOC, compared to other terminology registries, is its use of controlled vocabularies to describe KOS. It is considered as BARTOC's ``advantage that it specializes in supplementing Dewey’s decimal classification terms (up to the third hierarchic level) \ldots, as well as providing the multilingual EUROVOC thesaurus descriptors'' \cite{bratkova2014revue}. The KOS used to describe other KOS in BARTOC are described below. Each of them also has a BARTOC record in, given with its corresponding URI. 
 
 \subsubsection{EuroVoc}
-(\href{http://bartoc.org/en/node/15}{http://bartoc.org/en/node/15}) was chosen, although developed especially for the European parliamentary activities, because it is maintained by a trusted authority, it is open data, its domains are multidisciplinary and its terms are available in 25 languages, which is essential for BARTOC's multilingual search. The EuroVoc subject headings are represented hierarchically in the Advanced Search under "Topic". 
+(\href{http://bartoc.org/en/node/15}{http://bartoc.org/en/node/15}) was chosen, although developed especially for the European parliamentary activities, because it is maintained by a trusted authority, it is open data, its domains are multidisciplinary and its terms are available in 25 languages, which is essential for BARTOC's multilingual search. EuroVoc subject headings can be selected as \textit{Topic} in Advanced Search. 
 
 \subsubsection{DDC}
 (\href{http://bartoc.org/en/node/241}{http://bartoc.org/en/node/241})
@@ -155,7 +150,7 @@ is the most widely used library classification system, translated in more than 3
 
 \subsubsection{KOS Types Vocabulary}
 (\href{http://bartoc.org/en/node/1665}{http://bartoc.org/en/node/1665})
-was developed by the DCMI NKOS Task Group \cite{KOSTypes} and is, as far as we see, the only controlled vocabulary for KOS types. It differentiates between 14 different types of KOS (categorization scheme, classification scheme, dictionary, gazetteer, glossary, list, name authority list, ontology, semantic network, subject heading scheme, synonym ring, taxonomy, terminology, and thesaurus) and can be found in the Advanced Search under "Type".
+was developed by the DCMI NKOS Task Group \cite{KOSTypes} and is, as far as we see, the only controlled vocabulary for KOS types. It differentiates between 14 different types of KOS (categorization scheme, classification scheme, dictionary, gazetteer, glossary, list, name authority list, ontology, semantic network, subject heading scheme, synonym ring, taxonomy, terminology, and thesaurus).
 
 \subsubsection{Wikidata}
 (\href{http://bartoc.org/en/node/1940}{http://bartoc.org/en/node/1940})
@@ -163,7 +158,7 @@ is a general purpose database and authority file that anyone can edit. By now BA
 
 \subsubsection{}\hspace{-0.4em}%
 Additional vocabularies are used for format, license, and languages of KOS but they have not been published as terminologies yet.
-\pagebreak
+%\pagebreak
 
 \begin{figure}\centering
 \fbox{\includegraphics[scale=0.35]{screenshot-bartoc.jpg}}
@@ -175,9 +170,7 @@ Additional vocabularies are used for format, license, and languages of KOS but t
 \section{JSKOS data format for Knowledge Organization Systems}
 \label{sec:jskos}
 The coli-conc project at Verbundzentrale des GBV (VZG) is funded by German Research Foundation (DFG) to facilitate management and exchange of concordances between knowledge organization systems. This includes the collection and provision of information about KOS and its concepts in a uniform format. To some degree such format is given with the Simple Knowledge Organization System (SKOS) ontology.  SKOS allows the exchange of KOS as Linked Data on the Web but it comes with the complexity of RDF and it requires extensions to cover more than basic properties.
-To better support use of KOS data, especially in web applications, the JSKOS data format for Knowledge Organization Systems is precisely defined, tested, and documented \cite{JSKOS}. JSKOS is compatible with JSON-LD\footnote{JSON for Linking Data defines general mapping rules from JSON to RDF.} so it can be converted to SKOS/RDF and vice versa. 
-
-\pagebreak
+To better support use of KOS data, especially in web applications, the JSKOS data format for Knowledge Organization Systems is precisely defined, tested, and documented \cite{JSKOS}. JSKOS is also compatible with JSON-LD so it can be mapped to and from SKOS/RDF, if needed.\footnote{JSON-LD defines general mapping rules from JSON to RDF. General JSON-LD, however, has too many degrees of freedom, in contrast to JSKOS.}
 
 \subsection{JSKOS metadata scheme}
 In a nutshell, JSKOS supports the following object types:
@@ -240,17 +233,26 @@ Figure~\ref{fig:kos} illustrates the application of JSKOS objects to BARTOC. The
 \subsection{JSKOS-API}
 Reusing terminologies does not only require a uniform data format but also methods to access and query selected parts of a KOS. Such methods can be provided either by downloading and importing the whole KOS into a database or by querying an existing service via API. Several APIs and services exist for selected KOS (for instance WebDewey\footnote{\url{http://dewey.org/webdewey/}. This service is based on a subscription model.} for DDC) but without common standard and many terminology provider avoid the technical effort of setting up and maintain an additional web service. For this reason project coli-conc defines JSKOS-API based JSKOS and evaluation of similar APIs.
 
-The JSKOS-API Specification\footnote{See \href{https://gbv.github.io/jskos-api/}{https://gbv.github.io/jskos-api/} for the current draft.} is still in an early state of development. Nevertheless KOS services have been implemented to access DDC, Wikidata, and the Integrated Authority File (GND). 
-Based on JSKOS-API applications can make use of any KOS that is available in JSKOS format. Figure~\ref{fig:normdatenservice} shows a general terminology service (``Normdatendienst'') of VZG that provides search and browsing interface to multiple terminologies.
-The implementation is published as open source and can be used in other sites as well.\footnote{All software created in project coli-conc is published at GitHub. A current list of software can be found at \href{https://coli-conc.gbv.de/publications/}{https://coli-conc.gbv.de/publications/}.}
+The full specification of JSKOS-API requires an ongoing overview of uses cases for terminology services \cite{voss2016a}. A subset of the most common requirements has already be defined as Entity Lookup Microservice API (ELMA) \cite{ELMA}. The API provides two basic methods of access:
 
+\begin{itemize}
 
-\begin{figure}
-\centering
-\fbox{\includegraphics[scale=0.38]{screenshot-normdatenservice-ddc.png}}
-\caption{Screenshot of VZG Terminology Service}
-\label{fig:normdatenservice}
-\end{figure}
+\item \textbf{Entity Search} queries a list of concepts matching a query string with relevance ranking. The access method is intended for typeahead to select a concept of unknown URI. The response format is the same as OpenSearch Suggestions API \cite{Clinton2006}. % (\ref{fig:entity-search}).
+
+\item \textbf{Entity Lookup} queries one concept by its URI. The access method is intended to get details about a known concept.
+\end{itemize}
+
+JSKOS-API/ELMA services have been implemented as database application\footnote{See \url{https://github.com/gbv/cocoda-db}} and as wrappers\footnote{See \url{https://jskos-php-examples.herokuapp.com/}.} to access GND, Wikidata, ORCID, DDC and other KOS.  The implementations are published as open source to be used in other applications as well.\footnote{See \url{https://coli-conc.gbv.de/publications/} for a current list of software.}
+
+Based on JSKOS-API applications can make use of any KOS that is available in JSKOS format. As BARTOC is also mapped to JSKOS, it can be accessed by the same method. Planned applications at VZG include a tool to create and evaluate concept mappings, and a 
+general terminology service (``Normdatendienst'') to provide a uniform search and browsing interface to multiple terminologies.
+
+%\begin{figure}
+%\centering
+%\fbox{\includegraphics[scale=0.38]{screenshot-normdatenservice-ddc.png}}
+%\caption{Screenshot of VZG Terminology Service}
+%\label{fig:normdatenservice}
+%\end{figure}
 
 % To facilitate use of terminologies it not only requires a un
 
