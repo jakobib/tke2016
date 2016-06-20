@@ -17,6 +17,7 @@ $if(colortheme)$
 $endif$
 
 \usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,matrix}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -101,8 +102,8 @@ $endif$
         {\footnotesize 
             $if(shorttitle)$$shorttitle$$else$$title$$endif$$if(date)$, $date$$endif$
         };
-    \node[anchor=east,text=white,yshift=-31.5mm] at (current page.east) 
-        {\scriptsize \insertframenumber};
+%    \node[anchor=east,text=white,yshift=-31.5mm] at (current page.east) 
+%        {\scriptsize \insertframenumber};
   \end{tikzpicture}
 }
 \addtobeamertemplate{title page}{

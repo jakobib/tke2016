@@ -11,5 +11,8 @@ default: ${NAME}.pdf
 	pdflatex ${NAME}
 	pdflatex ${NAME}
 
+slides.pdf: slides.md
+	pandoc -s -S --template vzg-slides.tex -t beamer -V documentclass=beamer -o $@ $<
+
 clean:
 	rm -f ${NAME}.{ps,pdf,log,aux,out,dvi,bbl,blg}
